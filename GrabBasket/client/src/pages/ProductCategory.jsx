@@ -16,7 +16,7 @@ const ProductCategory = () => {
       {searchCategory  && (
         <div className='flex flex-col items-end w-max'>
             <p className='text-2xl font-medium'>{searchCategory.text.toUpperCase()}</p>
-            <div className="w-16 h-0.5 bg-primary rounded-full"></div>
+            <div className="w-16 h-0.5 bg-[#377DFF] rounded-full"></div>
         </div>
       )}
       {filterProducts.length>0? (
@@ -27,7 +27,7 @@ const ProductCategory = () => {
        </div> 
       ):(
         <div className='flex items-center justify-center h-[60vh]'>
-            <p className='text-2xl font-medium text-primary'>No Products found in this category.</p>
+            <p className='text-2xl font-medium text-[#377DFF]'>No Products found in this category.</p>
         </div>
       )}
     </div>
