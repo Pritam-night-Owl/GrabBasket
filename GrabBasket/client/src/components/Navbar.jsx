@@ -78,10 +78,11 @@ const Navbar = () => {
                     <span className={`absolute left-0 -bottom-1 h-0.5 w-0 group-hover:w-full transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-white'}`}></span>
                 </NavLink>
 
-                <NavLink to='/' className="relative group text-transition duration-300">
-                    Contact
-                    <span className={`absolute left-0 -bottom-1 h-0.5 w-0 group-hover:w-full transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-white'}`}></span>
-                </NavLink>
+                <NavLink to='/#newsletter' className="relative group text-transition duration-300">
+    Contact
+    <span className={`absolute left-0 -bottom-1 h-0.5 w-0 group-hover:w-full transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-white'}`}></span>
+</NavLink>
+
 
 
                 {/* Search Bar */}
@@ -100,7 +101,8 @@ const Navbar = () => {
                     onClick={() => navigate("/cart")}
                     className="relative cursor-pointer">
                     <img src={isScrolled ? assets.nav_cart_icon : assets.cart_icon} alt='cart' className='w-6 opacity-80' />
-                    <button className="absolute -top-2 -right-3 text-xs text-white bg-[#3BB77E] w-[18px] h-[18px] rounded-full">
+                    <button className={`absolute -top-2 -right-3 text-xs w-[18px] h-[18px] rounded-full transition-all duration-300 
+    ${isScrolled ? 'bg-[#002395] text-white' : 'bg-[#DBEAFE] text-black'}`}>
                         {getCartCount()}
                     </button>
                 </div>

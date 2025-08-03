@@ -38,7 +38,7 @@ const SellerLayout = () => {
         <>
             <div className="flex items-center justify-between px-4 md:px-8 border-b border-gray-300 py-3 bg-white ">
                 <Link  to='/'>
-                    <img src={assets.logo} alt="logo" className="cursor-pointer w-34 md:w-38"/>
+                    <img src={assets.logo_black} alt="logo" className="cursor-pointer w-34 md:w-38"/>
                 </Link>
                 <div className="flex items-center gap-5 text-gray-500">
                     <p>Hi! Admin</p>
@@ -50,7 +50,7 @@ const SellerLayout = () => {
                 {sidebarLinks.map((item) => (
                     <NavLink to={item.path} key={item.name} end={item.path === "/seller"}
                         className={({isActive})=>`flex items-center py-3 px-4 gap-3 
-                            ${isActive ? "border-r-4 md:border-r-[6px] bg-primary/10 border-primary text-primary"
+                            ${isActive ? "border-r-4 md:border-r-[6px] bg-[#377DFF]/10 border-[#377DFF] text-[#377DFF]"
                                 : "hover:bg-gray-100/90 border-white "
                             }`
                         }

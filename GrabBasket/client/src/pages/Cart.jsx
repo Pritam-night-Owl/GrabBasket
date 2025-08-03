@@ -91,10 +91,10 @@ const Cart = () => {
     },[user])
        
     return  products.length>0  && cartItems ? (
-        <div className="flex flex-col md:flex-row mt-16 ">
+        <div className="flex flex-col md:flex-row mt-25 ">
             <div className='flex-1 max-w-4xl'>
                 <h1 className="text-3xl font-medium mb-6">
-                    Shopping Cart <span className="text-sm text-primary">{getCartCount()} Items</span>
+                    Shopping Cart <span className="text-sm text-[#377DFF]">{getCartCount()} Items</span>
                 </h1>
 
                 <div className="grid grid-cols-[2fr_1fr_1fr] text-gray-500 text-base font-medium pb-3">
@@ -133,7 +133,7 @@ const Cart = () => {
                     </div>)
                 )}
 
-                <button onClick={()=>{navigate("/products");scrollTo(0,0)}} className="group cursor-pointer flex items-center mt-8 gap-2 text-primary font-medium">
+                <button onClick={()=>{navigate("/products");scrollTo(0,0)}} className="group cursor-pointer flex items-center mt-8 gap-2 text-[#377DFF] font-medium">
                    <img  className="group-hover:-translate-x-1 transiton " src={assets.arrow_right_icon_colored} alt="arrow"/>
                     Continue Shopping
                 </button>
@@ -148,7 +148,7 @@ const Cart = () => {
                     <p className="text-sm font-medium uppercase">Delivery Address</p>
                     <div className="relative flex justify-between items-start mt-2">
                         <p className="text-gray-500">{selectedAddress?`${selectedAddress.street},${selectedAddress.city},${selectedAddress.state},${selectedAddress.country}`:"No address found"}</p>
-                        <button onClick={() => setShowAddress(!showAddress)} className="text-primary hover:underline cursor-pointer">
+                        <button onClick={() => setShowAddress(!showAddress)} className="text-[#377DFF] hover:underline cursor-pointer">
                             Change
                         </button>
                         {showAddress && (
@@ -156,7 +156,7 @@ const Cart = () => {
                                 { addresses.map((address,index)=>(<p onClick={() =>{setSelectedAddress(address); setShowAddress(false)}} className="text-gray-500 p-2 hover:bg-gray-100">
                                     {address.street},{address.city},{address.state},{address.country}
                                 </p>))}
-                                <p onClick={() => navigate("/add-address")}className="text-primary text-center cursor-pointer p-2 hover:bg-primary/10">
+                                <p onClick={() => navigate("/add-address")}className="text-[#377DFF] text-center cursor-pointer p-2 hover:bg-[#377DFF]/10">
                                     Add address
                                 </p>
                             </div>
@@ -178,7 +178,7 @@ const Cart = () => {
                         <span>Price</span><span>{currency}{getCartAmount()}</span>
                     </p>
                     <p className="flex justify-between">
-                        <span>Shipping Fee</span><span className="text-green-600">Free</span>
+                        <span>Shipping Fee</span><span className="text-[#377DFF]">Free</span>
                     </p>
                     <p className="flex justify-between">
                         <span>Tax (2%)</span><span>{currency}{getCartAmount()*2/100}</span>
@@ -188,7 +188,7 @@ const Cart = () => {
                     </p>
                 </div>
 
-                <button  onClick= {placeOrder} className="w-full py-3 mt-6 cursor-pointer bg-primary text-white font-medium hover:bg-primary-dull transition">
+                <button  onClick= {placeOrder} className="w-full py-3 mt-6 cursor-pointer bg-[#377DFF] text-white font-medium hover:bg-[#002395] transition">
                     {paymentOption==="COD"?"Place Order":"Proceed to Checkout"}
                 </button>
             </div>
